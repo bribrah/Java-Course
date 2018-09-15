@@ -1,0 +1,16 @@
+/* Filename: PSA2.java
+ *
+ * Created by: Name
+ *
+ * Date:
+ */
+public class PSA2
+{
+    //The line below is magic, you don't have to understand it (yet)
+    public static void main(String[] args)
+    {
+        //Put all your commands to open two pictures using FileChooser
+        //and call each method and show each result of calling the methods.
+        //Then REMOVE THIS COMMENT.
+    }
+}

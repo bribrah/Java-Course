@@ -1,0 +1,42 @@
+/* Filename: PSA4A.java
+ * Name: Brian Espinosa
+ *
+ * Date: 9/11/2018
+ *
+ * Description: make a simple collage that uses three different filter methods.
+ */
+
+public class SimpleCollage
+{
+    //The line below is magic, you don't have to understand it (yet)
+    public static void main (String[] args)
+    {
+      //creating picture and copies and calling unaltered pic
+      Picture myPicture = new Picture(FileChooser.pickAFile());
+      Picture copy1 = new Picture(myPicture);
+      Picture copy2 = new Picture(myPicture);
+      myPicture.explore();
+      
+      //creating blank page of correct specs to copy to
+      
+      int width = 3 * myPicture.getWidth() + 1;
+      int height = myPicture.getHeight() + 1;
+      Picture blankPage = new Picture(width,height);
+      
+      //applying methods
+      myPicture.negative();
+      copy1.swapColor();
+      copy2.mirrorVert();
+      
+      //calling collage
+      blankPage.collage(myPicture, copy1, copy2);
+      blankPage.explore();
+      
+      
+      //writing pic
+      blankPage.write("./collage_hoodoos.jpg");
+      
+      
+    }
+}
+

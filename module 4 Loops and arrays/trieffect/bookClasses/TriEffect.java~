@@ -1,0 +1,18 @@
+/*
+ * Filename: TriEffect.java
+ * Name:
+ *
+ * Date:
+ *
+ * Description: This class is designed to...
+ *
+ */
+
+public class TriEffect
+{
+    //The line below is magic, you don't have to understand it (yet)
+    public static void main (String[] args)
+    {
+        // Remove this comment and add your code here.
+    }
+}

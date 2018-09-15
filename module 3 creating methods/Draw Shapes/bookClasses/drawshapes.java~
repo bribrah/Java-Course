@@ -1,0 +1,24 @@
+/*
+ * File Name = drawshapes
+ * name = Brian Espinosa
+ * date = 9/1/2018
+ */
+
+public class drawshapes
+{
+  public static void main (String[] args)
+  {
+    //making turtle and world
+    World w = new World(600,600);
+    Turtle a = new Turtle(w);
+    Turtle b = new Turtle(w);
+    Turtle c = new Turtle(w);
+    Turtle d = new Turtle(w);
+    
+    //getting turtles into position
+    
+    //making shapes
+    a.drawStar(5,100);
+    
+  }
+}
