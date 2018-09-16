@@ -1,0 +1,104 @@
+import java.util.*;
+import java.awt.*;
+
+/**
+ * Class that represents a turtle which is similar to a Logo turtle.
+ * This class inherts from SimpleTurtle and is for students
+ * to add methods to.
+ *
+ * Copyright Georgia Institute of Technology 2004
+ * @author Barb Ericson ericson@cc.gatech.edu
+ */
+public class Turtle extends SimpleTurtle
+{
+  ////////////////// constructors ///////////////////////
+  
+  /** Constructor that takes the x and y and a picture to
+   * draw on
+   * @param x the starting x position
+   * @param y the starting y position
+   * @param picture the picture to draw on
+   */
+  public Turtle (int x, int y, Picture picture) 
+  {
+    // let the parent constructor handle it
+    super(x,y,picture);
+  }
+  
+  /** Constructor that takes the x and y and a model
+   * display to draw it on
+   * @param x the starting x position
+   * @param y the starting y position
+   * @param modelDisplayer the thing that displays the model
+   */
+  public Turtle (int x, int y, 
+                 ModelDisplay modelDisplayer) 
+  {
+    // let the parent constructor handle it
+    super(x,y,modelDisplayer);
+  }
+  
+  /** Constructor that takes the model display
+   * @param modelDisplay the thing that displays the model
+   */
+  public Turtle (ModelDisplay modelDisplay) 
+  {
+    // let the parent constructor handle it
+    super(modelDisplay);
+  }
+  
+  /**
+   * Constructor that takes a picture to draw on
+   * @param p the picture to draw on
+   */
+  public Turtle (Picture p)
+  {
+    // let the parent constructor handle it
+    super(p);
+  }  
+  
+  /////////////////// methods ///////////////////////
+
+
+  public static void main(String[] args)
+  {
+    World earth = new World();
+    Turtle t1 = new Turtle(earth);
+    t1.forward();
+  }
+  /*
+   * Code to Draw a star with any odd number of points
+   * Format is drawStar(radius of star,how many points)
+   * number of pints must be odd or star wont generate corectly
+   */
+  public void drawStar(int points,int radius){
+    int turnAngle = 180 -180/points;
+    int  innerLine = (int) (radius *  .23611);
+    int outerLine = (radius - innerLine) / 2;
+    this.penUp();
+    this.forward(innerLine/2);
+    while (points>0){
+      this.penDown();
+      this.forward(outerLine);
+      this.turn(turnAngle);
+      this.forward(outerLine);
+      this.penUp();
+      this.forward(innerLine);
+      points -= 1;
+  }
+  }
+  /*
+* method to draw a polygon with equal side lengths
+* format is (number of sides you want in your polygon, length of each side)
+*/
+
+public void drawPolygon(int sides, int sidelength)
+{
+int angle = 360/sides;
+while (sides > 0){
+this.forward(sidelength);
+this.turn(angle);
+sides -= 1;}
+}
+
+} // this } is the end of class Turtle, put all new methods before this
