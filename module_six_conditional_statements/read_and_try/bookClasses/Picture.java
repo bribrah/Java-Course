@@ -229,6 +229,35 @@ public class Picture extends SimplePicture
       }
     }
   }
+  
+  public void exchange()
+  {
+    Pixel pixelArray[] = this.getPixels();
+    Pixel p = null;
+    Pixel q  = null;
+    int pRed;
+    int pBlue;
+    int pGreen;
+    for (int i = 0; i < pixelArray.length - 1; i+=2)
+    {
+      p = pixelArray[i];
+      q = pixelArray[i + 1];
+      
+      pRed = p.getRed();
+      pBlue = p.getBlue();
+      pGreen = p.getGreen();
+      
+      p.setRed(q.getRed());
+      p.setGreen(q.getGreen());
+      p.setBlue(q.getBlue());
+      
+      q.setRed(pRed);
+      q.setGreen(pGreen);
+      q.setBlue(pBlue);
+    }
+  }
+   
+    
 
   
 } // this } is the end of class Picture, put all new methods before this

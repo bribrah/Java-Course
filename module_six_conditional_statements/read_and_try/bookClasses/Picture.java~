@@ -157,8 +157,79 @@ public class Picture extends SimplePicture
       }
     }
   }
-          
-          
+  //* takes prevalent color and makes the pixel that color
+  public void fiveColor()
+  {
+    Pixel pixel = null;
+    int red = 0;
+    int green = 0;
+    int blue = 0;
+    for (int x = 0; x < this.getWidth(); x++)
+    {
+      for (int y = 0; y < this.getHeight(); y++)
+      {
+        pixel = this.getPixel(x , y);
+        red = pixel.getRed();
+        green = pixel.getGreen();
+        blue = pixel.getBlue();
+        if (red > green && red > blue){
+          pixel.setColor(Color.RED);
+        }
+        else if (red > green && blue > green){
+          pixel.setColor(Color.MAGENTA);
+        }
+        else if (green > red && green > blue){
+          pixel.setColor(Color.GREEN);
+        }
+        else if (green > red && blue > red){
+          pixel.setColor(Color.CYAN);
+        }
+        else if (green > blue && red > blue){
+          pixel.setColor(Color.YELLOW);
+        }
+        else{
+          pixel.setColor(Color.BLUE);
+        }
+      }
+    }
+  }
+  
+  public void posterize(int level)
+  {
+    Pixel pixel = null;
+    int red = 0;
+    int green = 0;
+    int blue = 0;
+    int increment = (int) (256/level);
+    int bottom, middle, top = 0;
+     for (int x = 0; x < this.getWidth(); x++)
+    {
+      for (int y = 0; y < this.getHeight(); y++)
+      {
+        pixel = this.getPixel(x,y);
+        red = pixel.getRed();
+        green = pixel.getGreen();
+        blue = pixel.getBlue();
+        
+        for (int i = 0; i < level; i++)
+        {
+          bottom = i * increment;
+          top = (i + 1) * increment;
+          middle = (int) ((bottom + top - 1)/2);
+          if (red >= bottom && red < top){
+            pixel.setRed(middle);
+          }
+          if (green >= bottom && red < top){
+            pixel.setGreen(middle);
+          }
+          if (blue >= bottom && blue < top){
+            pixel.setBlue(middle);
+          }
+        }
+      }
+    }
+  }
+
   
 } // this } is the end of class Picture, put all new methods before this
  

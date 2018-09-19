@@ -100,7 +100,7 @@ public class Picture extends SimplePicture
     {
       int valueRed = pixel.getRed();
       int valueBlue = pixel.getBlue();
-      int valueGreen = pixel.getBlue();
+      int valueGreen = pixel.getGreen();
       valueRed = valueRed - red;
       valueBlue = valueBlue - blue;
       valueGreen = valueGreen - green;

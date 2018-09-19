@@ -92,5 +92,23 @@ public class Picture extends SimplePicture
      pictObj.explore();
   }
   
+  //This method is used to subtract a specified amount of color from a picture
+  public void subtractColor(int red,int green,int blue)
+  {
+    Pixel pixelArray[] = this.getPixels();
+    for (Pixel pixel : pixelArray)
+    {
+      int valueRed = pixel.getRed();
+      int valueBlue = pixel.getBlue();
+      int valueGreen = pixel.getBlue();
+      valueRed = valueRed - red;
+      valueBlue = valueBlue - blue;
+      valueGreen = valueGreen - green;
+      pixel.setRed(valueRed);
+      pixel.setBlue(valueBlue);
+      pixel.setGreen(valueGreen);
+    }
+  }
+  
 } // this } is the end of class Picture, put all new methods before this
  

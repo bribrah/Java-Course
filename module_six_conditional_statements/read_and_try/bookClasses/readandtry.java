@@ -4,7 +4,7 @@ public class readandtry
    {
      Picture myPicture = new Picture (FileChooser.pickAFile());
      myPicture.explore();
-     myPicture.posterize(3);
+     myPicture.exchange();
      myPicture.explore();
      myPicture.write("./zion.jpg");
    }
