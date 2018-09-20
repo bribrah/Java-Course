@@ -1,0 +1,31 @@
+/* Filename: AdcanceCollage.java
+ * Name:Brian Espinosa
+ *
+ * Date: 9/20/2018
+ *
+ * Description: Take three different pictures and create a collage out of them.
+ *
+ */
+
+public class AdvanceCollage
+{
+    //The line below is magic, you don't have to understand it (yet)
+    public static void main (String[] args)
+    {
+      //creating pictures
+      Picture pic1 = new Picture(FileChooser.pickAFile());
+      Picture pic2 = new Picture(FileChooser.pickAFile());
+      Picture pic3 = new Picture(FileChooser.pickAFile());
+      
+      //filtering pictures
+      pic1.negativeBrighterThan(107);
+      pic2.posterize(4);
+      pic3.colorAddition(120,-30,50);
+      
+      //creating collage
+      Picture collage = Picture.createCollage(pic1,pic2,pic3);
+      collage.explore();
+      collage.write("/.Espinosa_AdvanceCollage.jpg");
+    }
+}
+

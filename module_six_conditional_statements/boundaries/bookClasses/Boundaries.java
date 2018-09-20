@@ -71,7 +71,8 @@ public class Boundaries
       blue = keyboard.nextInt();
       
       //if statement that restarts the while loop if any conditional statesments are true
-      if ( x + width > pictureWidth || y + height > pictureHeight || x > pictureWidth|| y > pictureHeight || red > 255 || green > 255 || blue > 255 ){
+      if ( x + width > pictureWidth || y + height > pictureHeight || x > pictureWidth|| y > pictureHeight || red > 255 || green > 255 || blue > 255
+         || x < 0 || y < 0|| x + width < 0 || y + height< 0|| red < 0 || green < 0 || blue < 0){
         System.out.println(prompt3);
         
         System.out.println(prompt4 + "(" + strPictureWidth + "," + strPictureHeight + ")");
