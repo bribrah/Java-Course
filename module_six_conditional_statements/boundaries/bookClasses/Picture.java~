@@ -91,18 +91,6 @@ public class Picture extends SimplePicture
      Picture pictObj = new Picture(fileName);
      pictObj.explore();
   }
-  public void drawBoxAtOffset(int xStart, int yStart, int width, int height, Color color)
-{
-  Pixel p = null;
-  for (int x = xStart; x < xStart + width; x++)
-  {
-    for (int y = yStart; y < yStart + height; y++)
-    {
-      p = getPixel(x, y);
-      p.setColor(color);
-    }
-  }
-}
-
+  
 } // this } is the end of class Picture, put all new methods before this
  
