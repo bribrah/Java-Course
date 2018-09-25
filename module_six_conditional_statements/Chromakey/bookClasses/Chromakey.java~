@@ -1,0 +1,10 @@
+public class Chromakey
+{
+   public static void main (String[] args)
+   {
+     Picture pic1 = new Picture(FileChooser.pickAFile());
+     Picture pic2 = new Picture(FileChooser.pickAFile());
+     pic1.chromakeyGreen(80,pic2);
+     pic1.explore();
+   }
+}

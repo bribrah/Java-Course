@@ -265,6 +265,8 @@ public class Picture extends SimplePicture
       index++;
     }
   }
+  
+  
   public static Picture createCollage(Picture p1, Picture p2, Picture p3)
   {
     //for loop to find the picture with the largest height

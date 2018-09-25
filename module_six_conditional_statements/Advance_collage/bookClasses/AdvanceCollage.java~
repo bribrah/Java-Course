@@ -23,9 +23,9 @@ public class AdvanceCollage
       pic3.colorAddition(120,-30,50);
       
       //creating collage
-      Picture collage = Picture.createCollage(pic1,pic2,pic3);
+      Picture collage = Picture.createCollage(pic2,pic1,pic3);
       collage.explore();
-      collage.write("/.Espinosa_AdvanceCollage.jpg");
+      collage.write("./Espinosa_AdvanceCollage.jpg");
     }
 }
 
