@@ -1,0 +1,4 @@
+public class readandtry
+{
+  System.out.println(new Student());
+}
