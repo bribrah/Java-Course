@@ -1,3 +1,8 @@
+/**
+ * this is a class to keep track of students
+ * the class stores students name and grades and provides methods for this information
+ * author:Brian Espinosa
+ */
 public class Student
 {
   
@@ -27,6 +32,14 @@ public class Student
   }
   
   ////////////modifiers//////////////////
+  
+  /**
+   * sets a grade in the gradeArray of the student
+   * can only do this if a gradeArray already exists for the student
+   * @param index the index to insert the grade at
+   * @param newGrade the grade to insert
+   * @return true if success, else fails
+   */
   public boolean setGrade(int index, double newGrade)
   {
     if (newGrade < 0 || this.gradeArray == null){

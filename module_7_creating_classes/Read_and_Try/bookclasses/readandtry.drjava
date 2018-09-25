@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20160913-225446">
+  <project autorefresh="false" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="Student.java" package="" timestamp="25-Sep-2018 13:26:49">
+        <select from="1956" to="1956"/>
+        <scroll column="748" row="0"/>
+      </file>
+      <file name="ClassPeriod.java" package="" timestamp="25-Sep-2018 14:11:43">
+        <select from="1956" to="1956"/>
+        <scroll column="748" row="0"/>
+      </file>
+      <file name="main.java" package="" timestamp="25-Sep-2018 14:17:29">
+        <select from="1956" to="1956"/>
+        <scroll column="748" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath>
+      <file absolute="false" name="../../../bookClasses/"/>
+    </classpath>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>
