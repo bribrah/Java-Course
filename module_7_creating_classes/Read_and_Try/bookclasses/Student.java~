@@ -5,11 +5,41 @@ public class Student
   private String name;
   private double[] gradeArray;
   
-  
-  /////////////methods/////////////////
-  public String toString()
+  ///////////////constructors////////////
+  public Student() {}
+  public Student(String theName)
   {
-    return "Student object named : " + this.name;
+    this.name = theName;
   }
   
+  public Student(String theName, double theGradeArray[])
+  {
+    this.name = theName;
+    this.gradeArray = theGradeArray;
+  }
+  
+  //////////accesors///////////////////
+  
+  
+  
+  /////////////methods/////////////////
+  public Double getAverage()
+  {
+    double average = 0.0;
+    
+    if (this.gradeArray != null && this.gradeArray.length > 0){
+      double sum = 0.0;
+      for (int i =0; i < this.gradeArray.length; i++)
+      {
+        sum = sum + this.gradeArray[i];
+      }
+      average = sum / this.gradeArray.length;
+    }
+    return average;
+  }
+  
+  public String  toString()
+  {
+    return "Student object named : " + this.name + "\nAverage Grade: " + this.getAverage();
+  }
 }

@@ -18,13 +18,54 @@ public class Student
     this.gradeArray = theGradeArray;
   }
   
+  //////////accesors///////////////////
+  public String getName() { return this.name;}
   
-  /////////////methods/////////////////
-  public String toString()
+  public double getGrade(int index)
   {
-    return "Student object named : " + this.name;
+    return this.gradeArray[index];
   }
   
-  public 
+  ////////////modifiers//////////////////
+  public boolean setGrade(int index, double newGrade)
+  {
+    if (newGrade < 0 || this.gradeArray == null){
+      return false;
+    }
+    else{
+      this.gradeArray[index] = newGrade;
+      return true;
+    }
+  }
+  public boolean setGradeArray(double gradeArray[])
+  {
+    if (this.gradeArray != null){
+      return false;
+    }
+    else{
+      this.gradeArray = gradeArray;
+      return true;
+    }
+  }
   
+  /////////////methods/////////////////
+  public Double getAverage()
+  {
+    double average = 0.0;
+    
+    if (this.gradeArray != null && this.gradeArray.length > 0){
+      double sum = 0.0;
+      for (int i =0; i < this.gradeArray.length; i++)
+      {
+        sum = sum + this.gradeArray[i];
+      }
+      average = sum / this.gradeArray.length;
+    }
+    return average;
+  }
+  
+  public String  toString()
+  {
+    return "Student object named : " + this.name + "\nAverage Grade: " + this.getAverage();
+  }
 }
