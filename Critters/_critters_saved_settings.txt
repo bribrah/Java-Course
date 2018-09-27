@@ -1,0 +1,10 @@
+#CSE 142 Critters saved settings
+#Thu Sep 27 13:31:56 PDT 2018
+Number\ of\ each\ critter=25
+Width=60
+Lion=true
+Bear=true
+Tiger=true
+Debug\ output=true
+Network\ features=true
+Height=50

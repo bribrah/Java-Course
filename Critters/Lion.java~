@@ -1,0 +1,24 @@
+import java.awt.Color;
+public class Lion
+{
+  ////////////contructors ///////////////
+  private Lion;
+  
+  
+  /////////// Methods //////////////
+  
+  public Color getColor() { return Color.RED;}
+  
+  boolean hasFought = false
+    
+ public boolean eat(){
+    if (hasFought == true){
+      return true
+    }
+    else {
+      return false
+    }
+    
+    
+  }
+}

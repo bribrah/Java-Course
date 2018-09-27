@@ -1,0 +1,56 @@
+import java.awt.Color;
+public class Tiger extends Critter
+{
+  ////////////constructors////////
+  private int hunger;
+  
+  
+  ////////////methods///////////
+  public Color getColor() {return Color.YELLOW();}
+  
+  int numEaten = 0
+  public boolean eat()
+  {
+    if (numEaten < this.hunger){
+      numEaten++;
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  
+  public Attack fight()
+  {
+    if (numEaten < this.hunger){
+      return Attack.SCRATCH;
+    }
+    else{
+      return Attack.POUNCE
+    }
+  }
+  
+  int turn = 0;
+  Direction direction = Random.nextInt(4);
+  public Direction getMove(){
+    if (turn % 3 == 0){
+      direction = Random.nextInt(4);
+    }
+    if (direction == 1){
+      turn++;
+      return Direction.NORTH;
+    }
+    else if (direction == 2){
+      turn++;
+      return Direction.WEST;
+    }
+    else if (direction == 0){
+      turn++;
+      return Direction.EAST;
+    }
+    else{
+      turn++;
+      return Direction.SOUTH;
+    }
+  }
+    
