@@ -1,0 +1,19 @@
+/**
+ * this class is meant to store the data associated with the participant in a study
+ */
+public class participant
+{
+  ////////////// fields ////////////
+  
+  private String name;
+  private int weight;
+  private int height;
+  
+  ////////// constructors //////////
+  /**
+   * no argument constructer
+   * sets fields to their default values
+   */
+  public Participant() {}
+  
+  /**
