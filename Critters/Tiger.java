@@ -5,12 +5,18 @@ public class Tiger extends Critter
   ////////////constructors////////
   public int hunger;
   
+  /*
+   * sets tiger strings color to yellow
+   */
   public Tiger(int hunger) { this.hunger = hunger;}
   
   
   ////////////methods///////////
   public Color getColor() {return Color.YELLOW;}
   
+  /*
+   * Returns eat if the tigger has not yet eaten as much as its hunger value
+   */
   int numEaten = 0;
   public boolean eat()
   {
@@ -23,6 +29,12 @@ public class Tiger extends Critter
     }
   }
   
+  /*
+   * Returns Scratch if tiger has not yet eaten as much food as its hunger value
+   * else it return pounce
+   * @param the string of the opponent it is interacting with
+   */
+  
   public Attack fight(String opponent)
   {
     if (numEaten < this.hunger){
@@ -33,6 +45,10 @@ public class Tiger extends Critter
     }
   }
   
+  /*
+   * moves the tiger in a random direction for 3 turns and then
+   * changes the direction to another random direction
+   */
   int turn = 0;
   Random rand = new Random();
   int direction = rand.nextInt(4);
@@ -58,6 +74,10 @@ public class Tiger extends Critter
     }
   }
   
+  /*
+   * makes the tigers appearence looks like the number of food it can still eat
+   * also known as its hunger
+   */
   public String toString()
   {
     return Integer.toString(this.hunger - numEaten);

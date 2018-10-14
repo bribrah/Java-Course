@@ -1,0 +1,22 @@
+public class Olympian extends Critter
+{
+  ////////////constructors///////////
+  public Olympian() {}
+  
+  ////////////methods////////////
+  
+  int amountEaten = 0
+  public boolean eat(){
+    if (amountEaten < 2){
+      amountEaten++;
+      return true;
+    }
+    else if (String.getNeighbour(WEST) =! null || String.getNeighbour(NORTH) =! null || 
+             String.getNeighbour(EAST) =! null || String.getNeighbour(SOUTH) =! null){
+      return false
+    }
+    else{
+      amountEaten = 0;
+      return true;
+    }
+  }

@@ -7,8 +7,16 @@ public class Lion extends Critter
   
   /////////// Methods //////////////
   
+  
+  /*
+   * sets color of Lion string to Red
+   */
   public Color getColor() { return Color.RED;}
   
+  /*
+   * makes it so lion will only eat if it has fought
+   * since the last time it has eaten
+   */
   boolean hasFought = false;
   
   public boolean eat(){
@@ -21,6 +29,11 @@ public class Lion extends Critter
     }
   }
   
+  /*
+   * Lion will attack with Roar if opponent string is "B"
+   * else it will pounce
+   * @param opponent the oppenent that the lion is interacting with
+   */
   public Attack fight(String opponent)
   {
     if (opponent == "B"){
@@ -33,6 +46,10 @@ public class Lion extends Critter
     }
   }
   
+  /*
+   * makes it so Lion will move forward 5 turns then turn
+   * right, efrectivey makes the lion move in a square pattern
+   */
   int turn = 0;
   public Direction getMove()
   {
@@ -58,6 +75,9 @@ public class Lion extends Critter
     }
   }
   
+  /*
+   * makes lion string appear as an "L"
+   */
   public String toString(){return "L";}
   
   

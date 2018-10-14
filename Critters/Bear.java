@@ -9,6 +9,10 @@ public class Bear extends Critter
   
   
   ///////////// methods /////////////
+  /*
+   * makes bear string color  brown if this .grizzly is true
+   * else it makes the bar string white
+   */
   public Color getColor()
   {
     if (this.grizzly == true)
@@ -20,11 +24,17 @@ public class Bear extends Critter
     }
   }
   
+  /*
+   * will always eat
+   */
   public boolean eat() {return true;}
   
+  /*will always attack with scratch*/
   public Attack fight(String opponent) { return Attack.SCRATCH;}
   
-  
+  /*
+   * makes bear move in a north than west zigzag pattern
+   */
   int moves = 0;
   public Direction getMove()
   {
@@ -48,6 +58,7 @@ public class Bear extends Critter
     }
   }
   
+  /*makes bear string appear as a "B"*/
   public String toString() {return "B";}
   
   

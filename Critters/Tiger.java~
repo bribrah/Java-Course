@@ -1,14 +1,17 @@
 import java.awt.Color;
+import java.util.Random;
 public class Tiger extends Critter
 {
   ////////////constructors////////
-  private int hunger;
+  public int hunger;
+  
+  public Tiger(int hunger) { this.hunger = hunger;}
   
   
   ////////////methods///////////
-  public Color getColor() {return Color.YELLOW();}
+  public Color getColor() {return Color.YELLOW;}
   
-  int numEaten = 0
+  int numEaten = 0;
   public boolean eat()
   {
     if (numEaten < this.hunger){
@@ -20,21 +23,22 @@ public class Tiger extends Critter
     }
   }
   
-  public Attack fight()
+  public Attack fight(String opponent)
   {
     if (numEaten < this.hunger){
       return Attack.SCRATCH;
     }
     else{
-      return Attack.POUNCE
+      return Attack.POUNCE;
     }
   }
   
   int turn = 0;
-  Direction direction = Random.nextInt(4);
+  Random rand = new Random();
+  int direction = rand.nextInt(4);
   public Direction getMove(){
     if (turn % 3 == 0){
-      direction = Random.nextInt(4);
+      direction = rand.nextInt(4);
     }
     if (direction == 1){
       turn++;
@@ -53,4 +57,10 @@ public class Tiger extends Critter
       return Direction.SOUTH;
     }
   }
+  
+  public String toString()
+  {
+    return Integer.toString(this.hunger - numEaten);
+  }
+}
     
